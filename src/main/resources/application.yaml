@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: spring-cloud-hystrix
+server:
+  port: 8009
+
+eureka:
+  client:
+    service-url:
+       defaultZone: http://eureka-service1:8000/eureka,http://eureka-service2:9000/eureka
+
+logging:
+  path: ./target/log
+  config: classpath:logback-boot.xml
+  file: ${spring.application.name}.log
+
